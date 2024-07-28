@@ -1,5 +1,6 @@
-const arr = [3,4,53,2,78,22,1]
+// here we iterate through out the array one by one
 
+const arr = [3,4,53,2,78,22,1]
 // O(n)
 const search = (term) => {
     for (let index = 0; index < arr.length; index++) {
