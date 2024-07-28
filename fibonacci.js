@@ -3,7 +3,7 @@
 // [0,1,1,2,3,5,8]
 
 
-const n = 30;
+const n = 7;
 // Printing n fibonacci sequence 
 
 // case 1
@@ -18,7 +18,7 @@ const finonacci_1 = (term) => {
 // console.log('case 1', finonacci_1(n))
 
 // case 2
-// Time Complexity: case 2 O(2^n) + O(n)
+// Time Complexity: case 2 O(2^n) + O(n) (for printing in loop)
 function fibonacci_2(term) {
     if (term <= 1) {
         return term;
@@ -27,7 +27,7 @@ function fibonacci_2(term) {
 }
 
 for (let i = 0; i < n; i++) {
-    // console.log('case 2', fibonacci_2(i));
+    console.log('case 2', fibonacci_2(i));
 };
 
 
@@ -50,5 +50,5 @@ const finonacci_sum = (term, stack) => {
     return finonacci_sum(term - 1, stack +1) + finonacci_sum(term - 2, stack+1) + 1;
 }
 
-// console.log('sum: ', finonacci_sum(n, 1))
+console.log('sum: ', finonacci_sum(7, 1))
 // console.log(count)
