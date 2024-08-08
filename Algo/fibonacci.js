@@ -53,7 +53,7 @@ const finonacci_sum = (term, stack) => {
 console.log('sum: ', finonacci_sum(7, 1))
 // console.log(count)
 
-
+// O(2^n)
 const fibonacci = (n) => {
     const fib = [0, 1]
     for (let i = 2; i <= n; i++) {
