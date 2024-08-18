@@ -104,3 +104,50 @@ function NotArray(len) {
   // Array-like
   console.log(`Array.from.call(NotArray, { length: 1, 0: "foo" }): `, Array.from.call(NotArray, { length: 1, 0: "foo" }));
   console.log(`Array.from.call({}, { length: 1, 0: "foo" }): `, Array.from.call({}, { length: 1, 0: "foo" }));
+
+
+
+  // Objects
+
+  let obj = { a:1, b:2, c:3 }
+
+  for (const [key, value] of Object.entries(obj)) {
+    console.log(`${key}: ${value}`);
+  }
+  console.log(Object.entries(obj))
+  console.log(Object.keys(obj))
+  console.log(Object.values(obj))
+
+  // Sets
+
+  const set_1 = new Set([1,2,3])
+  set_1.add(4)
+  console.log(set_1.add(5)) 
+  console.log(set_1.size) 
+  console.log(set_1.has(2))
+  console.log(set_1.delete(2))
+  console.log(set_1)
+for (const element of set_1) {
+  console.log('1',element)
+}
+
+set_1.forEach(element => {
+  console.log('2',element)
+});
+
+set_1.clear()
+
+console.log(set_1)
+
+
+const map1 = new Map([[true,1], [1,2]])
+console.log(map1)
+map1.set('2', false)
+map1.delete(1)
+console.log(map1)
+console.log(map1.has(2))
+console.log(map1.has('2'))
+map1.clear()
+  for (const [key, value] of map1) {
+    console.log(`${key}: ${value}`);
+  }
